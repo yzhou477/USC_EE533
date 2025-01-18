@@ -27,9 +27,9 @@
 
 1. Test the server.c and client.c
 
-   ![result of server.c](Pictures\Screenshot 2025-01-18 093907.png)
+   ![result of server.c](./Pictures/093907.png)
 
-   ![result of client.c](Pictures\Screenshot 2025-01-18 094359.png)
+   ![result of client.c](./Pictures/094359.png)
 
 2. Enhancements to the server code
 
@@ -80,9 +80,9 @@
 
    
 
-   the result of test:![con_server](Pictures\Screenshot 2025-01-18 095443.png)
+   the result of test:![con_server](./Pictures/095443.png)
 
-   ![client](Pictures\Screenshot 2025-01-18 095458.png)
+   ![client](./Pictures/095458.png)
 
    
 
@@ -139,9 +139,9 @@
 
    the result of test
 
-   ![dgram_server](Pictures\Screenshot 2025-01-18 101515.png)
+   ![dgram_server](./Pictures/101515.png)
 
-   ![dgram_client](Pictures\Screenshot 2025-01-18 101535.png)
+   ![dgram_client](./Pictures/101535.png)
 
    
 
@@ -157,4 +157,4 @@
 
 https://github.com/yzhou477/USC_EE533.git
 
-![record of commits](https://github.com/yzhou477/USC_EE533/blob/main/lab1/Pictures/Screenshot%202025-01-18%20103159.png)
+![record of commits](./Pictures/103159.png)
