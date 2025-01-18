@@ -4,13 +4,13 @@
 
 
 
-- Configuration of Virtual Machine
-- Test and Modification of Code
-- GitHub link and record of commits
+* [Configuration of Virtual Machine](#1)
+* [Test and Modification of Code](#2)
+* [GitHub link and record of commits](#3)
 
 
 
-#### Configuration of Virtual Machine
+<h4 id="1"> Configuration of Virtual Machine </h4>
 
 1. Create two Linux VMs in Vmware, a Server and a Client.
 
@@ -23,7 +23,7 @@
 
 
 
-#### Test and Modification of Code
+<h4 id="2"> Test and Modification of Code </h4>
 
 1. Test the server.c and client.c
 
@@ -153,7 +153,7 @@
 
    
 
-#### GitHub link and record of commits
+<h4 id="3"> GitHub link and record of commits </h3>
 
 https://github.com/yzhou477/USC_EE533.git
 
