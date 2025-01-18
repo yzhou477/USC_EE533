@@ -149,7 +149,7 @@
 
    the result of test
 
-   ![Unix domain socket](Pictures\Screenshot 2025-01-18 102234.png)
+   ![Unix domain socket](./Pictures/Screenshot%2025-01-18%102234.png)
 
    
 
