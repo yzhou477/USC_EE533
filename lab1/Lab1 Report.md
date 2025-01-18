@@ -156,3 +156,5 @@
 #### GitHub link and record of commits
 
 https://github.com/yzhou477/USC_EE533.git
+
+![record of commits](Pictures\Screenshot 2025-01-18 103159.png)
