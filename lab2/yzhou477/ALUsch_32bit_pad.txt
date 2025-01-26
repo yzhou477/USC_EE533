@@ -1,0 +1,286 @@
+Release 10.1 - par K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Sat Jan 25 20:24:43 2025
+
+
+INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
+1. The <design name>_pad.txt file (this file) designed to provide information on IO usage in a human readable ASCII text format viewable through common text editors.
+2. The <design namd>_pad.csv file for use with spreadsheet programs such as MS Excel. This file can also be read by PACE to communicate post PAR IO information.
+3. The <design name>.pad file designed for parsing by customers.  It uses the "|" as a data field separator.
+
+INPUT FILE:       ALUsch_32bit_map.ncd
+OUTPUT FILE:      ALUsch_32bit_pad.txt
+PART TYPE:        xa2s300e
+SPEED GRADE:      -6
+PACKAGE:          ft256
+
+Pinout by Pin Number:
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Pin Number|Signal Name|Pin Usage|Pin Name            |Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage  |Constraint|DCI Value|IO Register|Signal Integrity|
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|A1        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|A2        |           |         |TCK                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|A3        |z<1>       |IOB      |IO_VREF_0_L0N_YY    |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|A4        |z<2>       |IOB      |IO_L0P_YY           |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|A5        |z<10>      |IOB      |IO_L4P_Y            |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|A6        |z<13>      |IOB      |IO                  |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|A7        |z<18>      |IOB      |IO                  |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|A8        |z<20>      |IOB      |IO_LVDS_DLL_L8P     |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|A9        |z<21>      |IOB      |IO_L9N              |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|A10       |z<25>      |IOB      |IO_L11N_Y           |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|A11       |z<30>      |IOB      |IO_L13N_Y           |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|A12       |a<4>       |IOB      |IO_L16N_YY          |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|A13       |a<8>       |IOB      |IO_WRITE_L18N_YY    |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|A14       |a<9>       |IOB      |IO_CS_L18P_YY       |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|A15       |           |         |CCLK                |         |           |              |          |         |           |         |         |          |         |           |                |
+|A16       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|B1        |           |         |TMS                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|B2        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|B3        |           |IOB      |IO                  |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
+|B4        |z<4>       |IOB      |IO_L1P_YY           |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|B5        |z<9>       |IOB      |IO_VREF_0_L4N_Y     |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|B6        |z<12>      |IOB      |IO_L5P_Y            |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|B7        |z<14>      |IOB      |IO_L6N_Y            |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|B8        |           |GCLKIOB  |GCK2                |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
+|B9        |z<22>      |IOB      |IO_L9P              |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|B10       |z<26>      |IOB      |IO_L11P_Y           |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|B11       |a<0>       |IOB      |IO_VREF_1_L13P_Y    |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|B12       |a<5>       |IOB      |IO_L16P_YY          |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|B13       |a<7>       |IOB      |IO_VREF_1_L17P_Y    |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|B14       |           |         |TDO                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|B15       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|B16       |a<11>      |IOB      |IO_DIN_D0_L19N_YY   |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|C1        |z<0>       |IOB      |IO_VREF_7_L83N      |OUTPUT   |LVTTL*     |7             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|C2        |           |IOB      |IO_L83P             |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|C3        |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|C4        |z<3>       |IOB      |IO_L1N_YY           |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|C5        |z<5>       |IOB      |IO_VREF_0_L2N_YY    |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|C6        |z<11>      |IOB      |IO_L5N_Y            |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|C7        |z<15>      |IOB      |IO_L6P_Y            |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|C8        |           |GCLKIOB  |GCK3                |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
+|C9        |z<23>      |IOB      |IO_L10N_Y           |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|C10       |z<27>      |IOB      |IO                  |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|C11       |a<2>       |IOB      |IO_L14N_Y           |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|C12       |a<6>       |IOB      |IO_L17N_Y           |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|C13       |           |         |TDI                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|C14       |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|C15       |a<10>      |IOB      |IO_DOUT_BUSY_L19P_YY|INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|C16       |a<16>      |IOB      |IO_VREF_2_L22P_Y    |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|D1        |           |IOB      |IO_L82N_YY          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|D2        |           |IOB      |IO_L82P_YY          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|D3        |           |IOB      |IO                  |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|D4        |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|D5        |z<6>       |IOB      |IO_L2P_YY           |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|D6        |z<8>       |IOB      |IO_L3P_Y            |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|D7        |z<16>      |IOB      |IO_VREF_0_L7N_Y     |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|D8        |z<19>      |IOB      |IO_LVDS_DLL_L8N     |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|D9        |z<24>      |IOB      |IO_VREF_1_L10P_Y    |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|D10       |z<28>      |IOB      |IO_L12N_Y           |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|D11       |a<1>       |IOB      |IO_L14P_Y           |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|D12       |a<3>       |IOB      |IO_VREF_1_L15P_YY   |INPUT    |LVTTL*     |1             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|D13       |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|D14       |a<12>      |IOB      |IO_VREF_2_L20P_Y    |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|D15       |a<17>      |IOB      |IO_L22N_Y           |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|D16       |a<20>      |IOB      |IO_VREF_2_L24P_Y    |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|E1        |           |IOB      |IO_L80N             |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|E2        |           |IOB      |IO_L80P             |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|E3        |           |IOB      |IO_VREF_7_L81P_Y    |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|E4        |           |IOB      |IO_L81N_Y           |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|E5        |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|E6        |z<7>       |IOB      |IO_L3N_Y            |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|E7        |z<17>      |IOB      |IO_L7P_Y            |OUTPUT   |LVTTL*     |0             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|E8        |           |         |VCCO_0              |         |           |0             |          |         |           |         |3.30     |          |         |           |                |
+|E9        |           |         |VCCO_1              |         |           |1             |          |         |           |         |3.30     |          |         |           |                |
+|E10       |z<29>      |IOB      |IO_L12P_Y           |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|E11       |z<31>      |IOB      |IO_L15N_YY          |OUTPUT   |LVTTL*     |1             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|E12       |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|E13       |a<13>      |IOB      |IO_L20N_Y           |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|E14       |a<18>      |IOB      |IO_L23P             |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|E15       |a<21>      |IOB      |IO_D1_L24N_Y        |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|E16       |b<2>       |IOB      |IO_L26P             |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|F1        |           |IOB      |IO_L78N_YY          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|F2        |           |IOB      |IO_L78P_YY          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|F3        |           |IOB      |IO_L79N_Y           |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|F4        |           |IOB      |IO_VREF_7_L79P_Y    |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|F5        |           |IOB      |IO_L77P             |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|F6        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|F7        |           |         |VCCO_0              |         |           |0             |          |         |           |         |3.30     |          |         |           |                |
+|F8        |           |         |VCCO_0              |         |           |0             |          |         |           |         |3.30     |          |         |           |                |
+|F9        |           |         |VCCO_1              |         |           |1             |          |         |           |         |3.30     |          |         |           |                |
+|F10       |           |         |VCCO_1              |         |           |1             |          |         |           |         |3.30     |          |         |           |                |
+|F11       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|F12       |a<14>      |IOB      |IO_L21P_Y           |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|F13       |a<19>      |IOB      |IO_L23N             |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|F14       |b<4>       |IOB      |IO_D2_L25P_YY       |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|F15       |a<23>      |IOB      |IO_L26N             |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|F16       |b<7>       |IOB      |IO_VREF_2_L28P_Y    |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|G1        |           |IOB      |IO_L75N_Y           |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|G2        |           |IOB      |IO_VREF_7_L75P_Y    |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|G3        |           |IOB      |IO_L76P_YY          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|G4        |           |IOB      |IO_L76N_YY          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|G5        |           |IOB      |IO_L77N             |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|G6        |           |         |VCCO_7              |         |           |7             |          |         |           |         |3.30     |          |         |           |                |
+|G7        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|G8        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|G9        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|G10       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|G11       |           |         |VCCO_2              |         |           |2             |          |         |           |         |3.30     |          |         |           |                |
+|G12       |a<15>      |IOB      |IO_L21N_Y           |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|G13       |b<1>       |IOB      |IO_L25N_YY          |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|G14       |b<3>       |IOB      |IO_L27P_YY          |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|G15       |b<0>       |IOB      |IO_D3_L28N_Y        |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|G16       |a<28>      |IOB      |IO_L30P_YY          |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|H1        |           |PCIIOB   |IO_IRDY_L73N_YY     |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|H2        |           |IOB      |IO_L73P_YY          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|H3        |           |IOB      |IO_L74N             |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|H4        |           |IOB      |IO_L74P             |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
+|H5        |           |         |VCCO_7              |         |           |7             |          |         |           |         |3.30     |          |         |           |                |
+|H6        |           |         |VCCO_7              |         |           |7             |          |         |           |         |3.30     |          |         |           |                |
+|H7        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|H8        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|H9        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|H10       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|H11       |           |         |VCCO_2              |         |           |2             |          |         |           |         |3.30     |          |         |           |                |
+|H12       |           |         |VCCO_2              |         |           |2             |          |         |           |         |3.30     |          |         |           |                |
+|H13       |a<22>      |IOB      |IO_L27N_YY          |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|H14       |a<25>      |IOB      |IO_L29N             |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|H15       |a<26>      |IOB      |IO_L29P             |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|H16       |a<24>      |IOB      |IO_IRDY_L30N_YY     |INPUT    |LVTTL*     |2             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|J1        |           |IOB      |IO_L71P_Y           |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|J2        |           |IOB      |IO_L72P             |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|J3        |           |IOB      |IO_L72N             |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|J4        |           |PCIIOB   |IO_TRDY             |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|J5        |           |         |VCCO_6              |         |           |6             |          |         |           |         |any******|          |         |           |                |
+|J6        |           |         |VCCO_6              |         |           |6             |          |         |           |         |any******|          |         |           |                |
+|J7        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|J8        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|J9        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|J10       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|J11       |           |         |VCCO_3              |         |           |3             |          |         |           |         |3.30     |          |         |           |                |
+|J12       |           |         |VCCO_3              |         |           |3             |          |         |           |         |3.30     |          |         |           |                |
+|J13       |a<27>      |IOB      |IO_TRDY             |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|J14       |b<5>       |IOB      |IO_D4_L32P_Y        |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|J15       |a<29>      |IOB      |IO_L31N             |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|J16       |a<30>      |IOB      |IO_L31P             |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|K1        |           |IOB      |IO_VREF_6_L71N_Y    |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|K2        |           |IOB      |IO_L70P_YY          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|K3        |           |IOB      |IO_L70N_YY          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|K4        |           |IOB      |IO_L68P_YY          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|K5        |           |IOB      |IO_L68N_YY          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|K6        |           |         |VCCO_6              |         |           |6             |          |         |           |         |any******|          |         |           |                |
+|K7        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|K8        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|K9        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|K10       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|K11       |           |         |VCCO_3              |         |           |3             |          |         |           |         |3.30     |          |         |           |                |
+|K12       |a<31>      |IOB      |IO_L33P_YY          |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|K13       |b<6>       |IOB      |IO_VREF_3_L32N_Y    |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|K14       |b<11>      |IOB      |IO_L35P_YY          |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|K15       |b<10>      |IOB      |IO_L34N             |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|K16       |b<9>       |IOB      |IO_L34P             |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|L1        |           |IOB      |IO_L69P             |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|L2        |           |IOB      |IO_L69N             |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|L3        |           |IOB      |IO_L67P_Y           |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|L4        |           |IOB      |IO_L65P_Y           |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|L5        |           |IOB      |IO_VREF_6_L65N_Y    |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|L6        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|L7        |           |         |VCCO_5              |         |           |5             |          |         |           |         |any******|          |         |           |                |
+|L8        |           |         |VCCO_5              |         |           |5             |          |         |           |         |any******|          |         |           |                |
+|L9        |           |         |VCCO_4              |         |           |4             |          |         |           |         |3.30     |          |         |           |                |
+|L10       |           |         |VCCO_4              |         |           |4             |          |         |           |         |3.30     |          |         |           |                |
+|L11       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|L12       |b<8>       |IOB      |IO_L33N_YY          |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|L13       |b<12>      |IOB      |IO_D5_L35N_YY       |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|L14       |b<15>      |IOB      |IO                  |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|L15       |b<14>      |IOB      |IO_VREF_3_L36N_Y    |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|L16       |b<13>      |IOB      |IO_D6_L36P_Y        |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|M1        |           |IOB      |IO_L66P             |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|M2        |           |IOB      |IO_VREF_6_L67N_Y    |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|M3        |           |IOB      |IO_L64P_YY          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|M4        |           |IOB      |IO_L64N_YY          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|M5        |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|M6        |           |IOB      |IO_L55N_Y           |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|M7        |           |IOB      |IO_VREF_5_L53N_Y    |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|M8        |           |         |VCCO_5              |         |           |5             |          |         |           |         |any******|          |         |           |                |
+|M9        |           |         |VCCO_4              |         |           |4             |          |         |           |         |3.30     |          |         |           |                |
+|M10       |sub_cout   |IOB      |IO_L48P_Y           |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|M11       |b<31>      |IOB      |IO_VREF_4_L45P_YY   |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|M12       |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|M13       |b<16>      |IOB      |IO                  |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|M14       |b<19>      |IOB      |IO_L39P_YY          |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|M15       |b<18>      |IOB      |IO_VREF_3_L38N_Y    |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|M16       |b<17>      |IOB      |IO_L38P_Y           |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|N1        |           |IOB      |IO_L66N             |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|N2        |           |IOB      |IO_L63P_Y           |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|N3        |           |IOB      |IO_VREF_6_L63N_Y    |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|N4        |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|N5        |           |IOB      |IO_L59N_YY          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|N6        |           |IOB      |IO_L57N_Y           |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|N7        |           |IOB      |IO_L55P_Y           |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|N8        |           |IOB      |IO_L53P_Y           |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|N9        |           |IOB      |IO_L51P             |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
+|N10       |shiftdir   |IOB      |IO_L48N_Y           |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|N11       |add_cout   |IOB      |IO_L45N_YY          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |          |         |NO         |NONE            |
+|N12       |b<29>      |IOB      |IO_L44P_YY          |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|N13       |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|N14       |b<20>      |IOB      |IO_L39N_YY          |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|N15       |b<22>      |IOB      |IO_L40N             |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|N16       |b<21>      |IOB      |IO_VREF_3_L40P      |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|P1        |           |IOB      |IO_L62P_YY          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|P2        |           |IOB      |IO_L62N_YY          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
+|P3        |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|P4        |           |IOB      |IO_L61N_YY          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|P5        |           |IOB      |IO_L59P_YY          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|P6        |           |IOB      |IO_L57P_Y           |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|P7        |           |IOB      |IO                  |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|P8        |           |IOB      |IO                  |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|P9        |           |IOB      |IO_L51N             |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
+|P10       |           |IOB      |IO_L49N_Y           |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
+|P11       |opr<2>     |IOB      |IO_L47N_Y           |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|P12       |b<30>      |IOB      |IO_L44N_YY          |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|P13       |b<27>      |IOB      |IO_L43P             |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|P14       |           |         |VCCINT              |         |           |              |          |         |           |         |1.8      |          |         |           |                |
+|P15       |b<24>      |IOB      |IO_INIT_L41N_YY     |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|P16       |b<23>      |IOB      |IO_D7_L41P_YY       |INPUT    |LVTTL*     |3             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|R1        |           |         |M1                  |         |           |              |          |         |           |         |         |          |         |           |                |
+|R2        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|R3        |           |         |M2                  |         |           |              |          |         |           |         |         |          |         |           |                |
+|R4        |           |IOB      |IO_L61P_YY          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|R5        |           |IOB      |IO_VREF_5_L58N_YY   |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|R6        |           |IOB      |IO_VREF_5_L56N_Y    |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|R7        |           |IOB      |IO_L54N_Y           |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|R8        |           |DLLIOB   |IO_LVDS_DLL_L52N    |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|R9        |           |DLLIOB   |IO_LVDS_DLL_L52P    |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
+|R10       |           |IOB      |IO_VREF_4_L50P_Y    |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
+|R11       |           |IOB      |IO_L49P_Y           |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
+|R12       |cin        |IOB      |IO_VREF_4_L47P_Y    |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|R13       |b<28>      |IOB      |IO_VREF_4_L43N      |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|R14       |b<25>      |IOB      |IO_L42P_YY          |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|R15       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|R16       |           |         |PROGRAM             |         |           |              |          |         |           |         |         |          |         |           |                |
+|T1        |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
+|T2        |           |         |M0                  |         |           |              |          |         |           |         |         |          |         |           |                |
+|T3        |           |IOB      |IO_VREF_5_L60N_Y    |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|T4        |           |IOB      |IO_L60P_Y           |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|T5        |           |IOB      |IO_L58P_YY          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|T6        |           |IOB      |IO_L56P_Y           |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|T7        |           |IOB      |IO_L54P_Y           |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|T8        |           |GCLKIOB  |GCK1                |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
+|T9        |           |GCLKIOB  |GCK0                |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
+|T10       |           |IOB      |IO_L50N_Y           |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
+|T11       |           |IOB      |IO                  |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
+|T12       |opr<0>     |IOB      |IO_L46N_Y           |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|T13       |opr<1>     |IOB      |IO_L46P_Y           |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|T14       |b<26>      |IOB      |IO_L42N_YY          |INPUT    |LVTTL*     |4             |          |         |           |NONE     |         |          |         |NO         |NONE            |
+|T15       |           |         |DONE                |         |           |              |          |         |           |         |         |          |         |           |                |
+|T16       |           |         |GND                 |         |           |              |          |         |           |         |         |          |         |           |                |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Default value.
+** This default Pullup/Pulldown value can be overridden in Bitgen. 
+****** Special VCCO requirements may apply. Please consult the device 
+       family datasheet for specific guideline on VCCO requirements. 
+
+

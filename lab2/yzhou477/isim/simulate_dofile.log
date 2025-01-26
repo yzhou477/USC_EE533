@@ -1,3 +1,4 @@
 run 1000 ns
-run 600ns
+run 800
+run 800ns
 exit

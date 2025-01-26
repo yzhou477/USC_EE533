@@ -1,0 +1,3 @@
+verilog work "ALUv_32bit.v"
+vhdl work "ALUv_32bittest.vhw"
+verilog work "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

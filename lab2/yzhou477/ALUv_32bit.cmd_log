@@ -1,0 +1,5 @@
+xst -ise "C:/yzhou477/yzhou477.ise" -intstyle ise -ifn "C:/yzhou477/ALUv_32bit.xst" -ofn "C:/yzhou477/ALUv_32bit.syr"
+ngdbuild -ise "C:/yzhou477/yzhou477.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xa2s300e-ft256-6 "ALUv_32bit.ngc" ALUv_32bit.ngd
+map -ise "C:/yzhou477/yzhou477.ise" -intstyle ise -p xa2s300e-ft256-6 -cm area -pr off -k 4 -c 100 -tx off -o ALUv_32bit_map.ncd ALUv_32bit.ngd ALUv_32bit.pcf
+par -ise "C:/yzhou477/yzhou477.ise" -w -intstyle ise -ol std -t 1 ALUv_32bit_map.ncd ALUv_32bit.ncd ALUv_32bit.pcf
+trce -ise "C:/yzhou477/yzhou477.ise" -intstyle ise -e 3 -s 6 -xml ALUv_32bit ALUv_32bit.ncd -o ALUv_32bit.twr ALUv_32bit.pcf

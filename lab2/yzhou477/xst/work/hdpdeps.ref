@@ -1,0 +1,97 @@
+V3 73
+FL C:/yzhou477/ALUsch_32bit.vhf 2025/01/25.20:09:59 K.31
+EN work/ALUsch_32bit 1737865416 FL C:/yzhou477/ALUsch_32bit.vhf \
+      PB ieee/std_logic_1164 1200023565 PH ieee/NUMERIC_STD 1200023568 LB UNISIM \
+      PH unisim/VCOMPONENTS 1200023571
+AR work/ALUsch_32bit/BEHAVIORAL 1737865417 \
+      FL C:/yzhou477/ALUsch_32bit.vhf EN work/ALUsch_32bit 1737865416 \
+      CP fadd_32bit CP subtractor_32bit CP shifterlog1_32bit CP AND2_32bit \
+      CP OR2_32bit CP MUX2_32bit
+FL C:/yzhou477/AND2_32bit.vhf 2025/01/25.19:06:11 K.31
+EN work/AND2_32bit 1737865410 FL C:/yzhou477/AND2_32bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/AND2_32bit/BEHAVIORAL 1737865411 \
+      FL C:/yzhou477/AND2_32bit.vhf EN work/AND2_32bit 1737865410 CP AND2_8bit
+FL C:/yzhou477/AND2_8bit.vhf 2025/01/25.19:06:08 K.31
+EN work/AND2_8bit 1737865400 FL C:/yzhou477/AND2_8bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/AND2_8bit/BEHAVIORAL 1737865401 \
+      FL C:/yzhou477/AND2_8bit.vhf EN work/AND2_8bit 1737865400 CP AND2
+FL C:/yzhou477/fadd_1bit.vhf 2025/01/25.11:59:48 K.31
+EN work/fadd_1bit 1737865388 FL C:/yzhou477/fadd_1bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/fadd_1bit/BEHAVIORAL 1737865389 \
+      FL C:/yzhou477/fadd_1bit.vhf EN work/fadd_1bit 1737865388 CP XOR2 CP AND2 \
+      CP OR3
+FL C:/yzhou477/fadd_32bit.vhf 2025/01/25.11:59:56 K.31
+EN work/fadd_32bit 1737865404 FL C:/yzhou477/fadd_32bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/fadd_32bit/BEHAVIORAL 1737865405 \
+      FL C:/yzhou477/fadd_32bit.vhf EN work/fadd_32bit 1737865404 CP fadd_8bit
+FL C:/yzhou477/fadd_8bit.vhf 2025/01/25.11:59:51 K.31
+EN work/fadd_8bit 1737865392 FL C:/yzhou477/fadd_8bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/fadd_8bit/BEHAVIORAL 1737865393 \
+      FL C:/yzhou477/fadd_8bit.vhf EN work/fadd_8bit 1737865392 CP fadd_1bit
+FL C:/yzhou477/MUX2.vhf 2025/01/25.19:06:05 K.31
+EN work/MUX2 1737865390 FL C:/yzhou477/MUX2.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/MUX2/BEHAVIORAL 1737865391 \
+      FL C:/yzhou477/MUX2.vhf EN work/MUX2 1737865390 CP AND2 CP OR2 CP INV
+FL C:/yzhou477/MUX2_32bit.vhf 2025/01/25.19:06:27 K.31
+EN work/MUX2_32bit 1737865414 FL C:/yzhou477/MUX2_32bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/MUX2_32bit/BEHAVIORAL 1737865415 \
+      FL C:/yzhou477/MUX2_32bit.vhf EN work/MUX2_32bit 1737865414 CP MUX2_8bit
+FL C:/yzhou477/MUX2_8bit.vhf 2025/01/25.19:06:24 K.31
+EN work/MUX2_8bit 1737865396 FL C:/yzhou477/MUX2_8bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/MUX2_8bit/BEHAVIORAL 1737865397 \
+      FL C:/yzhou477/MUX2_8bit.vhf EN work/MUX2_8bit 1737865396 CP MUX2
+FL C:/yzhou477/OR2_32bit.vhf 2025/01/25.19:06:14 K.31
+EN work/OR2_32bit 1737865412 FL C:/yzhou477/OR2_32bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/OR2_32bit/BEHAVIORAL 1737865413 \
+      FL C:/yzhou477/OR2_32bit.vhf EN work/OR2_32bit 1737865412 CP OR2_8bit
+FL C:/yzhou477/OR2_8bit.vhf 2025/01/25.19:06:18 K.31
+EN work/OR2_8bit 1737865398 FL C:/yzhou477/OR2_8bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/OR2_8bit/BEHAVIORAL 1737865399 \
+      FL C:/yzhou477/OR2_8bit.vhf EN work/OR2_8bit 1737865398 CP OR2
+FL C:/yzhou477/shifterlog1_32bit.vhf 2025/01/25.19:06:01 K.31
+EN work/shifterlog1_32bit 1737865408 FL C:/yzhou477/shifterlog1_32bit.vhf \
+      PB ieee/std_logic_1164 1200023565 PH ieee/NUMERIC_STD 1200023568 LB UNISIM \
+      PH unisim/VCOMPONENTS 1200023571
+AR work/shifterlog1_32bit/BEHAVIORAL 1737865409 \
+      FL C:/yzhou477/shifterlog1_32bit.vhf EN work/shifterlog1_32bit 1737865408 \
+      CP MUX2 CP GND
+FL C:/yzhou477/subtractor_32bit.vhf 2025/01/25.18:22:01 K.31
+EN work/subtractor_32bit 1737865406 FL C:/yzhou477/subtractor_32bit.vhf \
+      PB ieee/std_logic_1164 1200023565 PH ieee/NUMERIC_STD 1200023568 LB UNISIM \
+      PH unisim/VCOMPONENTS 1200023571
+AR work/subtractor_32bit/BEHAVIORAL 1737865407 \
+      FL C:/yzhou477/subtractor_32bit.vhf EN work/subtractor_32bit 1737865406 \
+      CP XOR1_32bit CP fadd_32bit
+FL C:/yzhou477/synfadd_8bit.vhf 2025/01/25.11:59:53 K.31
+EN work/FD8CE_MXILINX_synfadd_8bit 1737863562 FL C:/yzhou477/synfadd_8bit.vhf \
+      PB ieee/std_logic_1164 1200023565 PH ieee/NUMERIC_STD 1200023568 LB UNISIM \
+      PH unisim/VCOMPONENTS 1200023571
+AR work/FD8CE_MXILINX_synfadd_8bit/BEHAVIORAL 1737863563 \
+      FL C:/yzhou477/synfadd_8bit.vhf EN work/FD8CE_MXILINX_synfadd_8bit 1737863562 \
+      CP FDCE
+EN work/synfadd_8bit 1737863564 FL C:/yzhou477/synfadd_8bit.vhf \
+      PB ieee/std_logic_1164 1200023565 PH ieee/NUMERIC_STD 1200023568 LB UNISIM \
+      PH unisim/VCOMPONENTS 1200023571
+AR work/synfadd_8bit/BEHAVIORAL 1737863565 \
+      FL C:/yzhou477/synfadd_8bit.vhf EN work/synfadd_8bit 1737863564 CP FDCE \
+      CP FD8CE_MXILINX_synfadd_8bit CP fadd_8bit
+FL C:/yzhou477/XOR1_32bit.vhf 2025/01/25.12:00:03 K.31
+EN work/XOR1_32bit 1737865402 FL C:/yzhou477/XOR1_32bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/XOR1_32bit/BEHAVIORAL 1737865403 \
+      FL C:/yzhou477/XOR1_32bit.vhf EN work/XOR1_32bit 1737865402 CP XOR1_8bit
+FL C:/yzhou477/XOR1_8bit.vhf 2025/01/25.12:00:01 K.31
+EN work/XOR1_8bit 1737865394 FL C:/yzhou477/XOR1_8bit.vhf PB ieee/std_logic_1164 1200023565 \
+      PH ieee/NUMERIC_STD 1200023568 LB UNISIM PH unisim/VCOMPONENTS 1200023571
+AR work/XOR1_8bit/BEHAVIORAL 1737865395 \
+      FL C:/yzhou477/XOR1_8bit.vhf EN work/XOR1_8bit 1737865394 CP XOR2

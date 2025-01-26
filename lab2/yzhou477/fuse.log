@@ -1,109 +1,38 @@
 Determining compilation order of HDL files
-Analyzing VHDL file fadd_1bit.vhf
-Restoring VHDL parse-tree ieee.std_logic_1164 from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_1164.vdb
-Restoring VHDL parse-tree std.standard from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/std/standard.vdb
-Restoring VHDL parse-tree ieee.numeric_std from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/numeric_std.vdb
-Restoring VHDL parse-tree unisim.vcomponents from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/unisim/unisim.vdbl
-Analyzing VHDL file XOR1_8bit.vhf
-Analyzing VHDL file MUX2.vhf
-Analyzing VHDL file fadd_8bit.vhf
-Analyzing VHDL file XOR1_32bit.vhf
-Analyzing VHDL file OR2_8bit.vhf
-Analyzing VHDL file MUX2_8bit.vhf
-Analyzing VHDL file fadd_32bit.vhf
-Analyzing VHDL file AND2_8bit.vhf
-Analyzing VHDL file subtractor_32bit.vhf
-Analyzing VHDL file shifterlog1_32bit.vhf
-Analyzing VHDL file OR2_32bit.vhf
-Analyzing VHDL file MUX2_32bit.vhf
-Analyzing VHDL file AND2_32bit.vhf
-Analyzing VHDL file ALUsch_32bit.vhf
-Analyzing VHDL file ALUsch_32bittest.vhw
+Analyzing Verilog file ALUv_32bit.v
+Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+Analyzing VHDL file ALUv_32bittest.vhw
 Restoring VHDL parse-tree ieee.std_logic_textio from
 c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_textio.vdb
+Restoring VHDL parse-tree std.standard from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/std/standard.vdb
 Restoring VHDL parse-tree std.textio from
 c:/xilinx/10.1/ise/vhdl/hdp/nt/std/textio.vdb
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_1164.vdb
 Restoring VHDL parse-tree ieee.std_logic_arith from
 c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_arith.vdb
 Restoring VHDL parse-tree ieee.std_logic_unsigned from
 c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_unsigned.vdb
-Saving VHDL parse-tree work.fadd_1bit into c:/yzhou477/isim/work/fadd_1bit.vdb
-Saving VHDL parse-tree work.xor1_8bit into c:/yzhou477/isim/work/xor1_8bit.vdb
-Saving VHDL parse-tree work.mux2 into c:/yzhou477/isim/work/mux2.vdb
-Saving VHDL parse-tree work.fadd_8bit into c:/yzhou477/isim/work/fadd_8bit.vdb
-Saving VHDL parse-tree work.xor1_32bit into c:/yzhou477/isim/work/xor1_32bit.vdb
-Saving VHDL parse-tree work.or2_8bit into c:/yzhou477/isim/work/or2_8bit.vdb
-Saving VHDL parse-tree work.mux2_8bit into c:/yzhou477/isim/work/mux2_8bit.vdb
-Saving VHDL parse-tree work.fadd_32bit into c:/yzhou477/isim/work/fadd_32bit.vdb
-Saving VHDL parse-tree work.and2_8bit into c:/yzhou477/isim/work/and2_8bit.vdb
-Saving VHDL parse-tree work.subtractor_32bit into
-c:/yzhou477/isim/work/subtractor_32bit.vdb
-Saving VHDL parse-tree work.shifterlog1_32bit into
-c:/yzhou477/isim/work/shifterlog1_32bit.vdb
-Saving VHDL parse-tree work.or2_32bit into c:/yzhou477/isim/work/or2_32bit.vdb
-Saving VHDL parse-tree work.mux2_32bit into c:/yzhou477/isim/work/mux2_32bit.vdb
-Saving VHDL parse-tree work.and2_32bit into c:/yzhou477/isim/work/and2_32bit.vdb
-Saving VHDL parse-tree work.alusch_32bit into
-c:/yzhou477/isim/work/alusch_32bit.vdb
-Saving VHDL parse-tree work.alusch_32bittest into
-c:/yzhou477/isim/work/alusch_32bittest.vdb
+Saving VHDL parse-tree work.aluv_32bittest into
+c:/yzhou477/isim/work/aluv_32bittest.vdb
 Starting static elaboration
-WARNING:HDLCompiler:746 - "N:/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 867.
-   Range is empty (null range)
-WARNING:HDLCompiler:746 - "N:/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 868.
-   Range is empty (null range)
-Restoring VHDL parse-tree unisim.xor2 from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/unisim/unisim.vdbl
-Restoring VHDL parse-tree unisim.and2 from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/unisim/unisim.vdbl
-Restoring VHDL parse-tree unisim.or3 from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/unisim/unisim.vdbl
-Restoring VHDL parse-tree unisim.or2 from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/unisim/unisim.vdbl
-Restoring VHDL parse-tree unisim.inv from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/unisim/unisim.vdbl
-Restoring VHDL parse-tree unisim.gnd from
-c:/xilinx/10.1/ise/vhdl/hdp/nt/unisim/unisim.vdbl
+WARNING:HDLCompiler:918 - "ALUv_32bittest.vhw" Line 54. Size mismatch in mixed
+   language port association, verilog port a
 Completed static elaboration
-Fuse Memory Usage: 61000 Kb
-Fuse CPU Usage: 2218 ms
+Fuse Memory Usage: 54856 Kb
+Fuse CPU Usage: 1030 ms
 Using precompiled package standard from library std
-Using precompiled package std_logic_1164 from library ieee
-Using precompiled package numeric_std from library ieee
 Using precompiled package textio from library std
+Using precompiled package std_logic_1164 from library ieee
 Using precompiled package std_logic_textio from library ieee
 Using precompiled package std_logic_arith from library ieee
 Using precompiled package std_logic_unsigned from library ieee
-Compiling package vcomponents
-Compiling architecture xor2_v of entity xor2 [xor2_default]
-Compiling architecture and2_v of entity and2 [and2_default]
-Compiling architecture or3_v of entity or3 [or3_default]
-Compiling architecture behavioral of entity fadd_1bit [fadd_1bit_default]
-Compiling architecture behavioral of entity fadd_8bit [fadd_8bit_default]
-Compiling architecture behavioral of entity fadd_32bit [fadd_32bit_default]
-Compiling architecture behavioral of entity xor1_8bit [xor1_8bit_default]
-Compiling architecture behavioral of entity xor1_32bit [xor1_32bit_default]
-Compiling architecture behavioral of entity subtractor_32bit
-[subtractor_32bit_default]
-Compiling architecture or2_v of entity or2 [or2_default]
-Compiling architecture inv_v of entity inv [inv_default]
-Compiling architecture behavioral of entity mux2 [mux2_default]
-Compiling architecture gnd_v of entity gnd [gnd_default]
-Compiling architecture behavioral of entity shifterlog1_32bit
-[shifterlog1_32bit_default]
-Compiling architecture behavioral of entity and2_8bit [and2_8bit_default]
-Compiling architecture behavioral of entity and2_32bit [and2_32bit_default]
-Compiling architecture behavioral of entity or2_8bit [or2_8bit_default]
-Compiling architecture behavioral of entity or2_32bit [or2_32bit_default]
-Compiling architecture behavioral of entity mux2_8bit [mux2_8bit_default]
-Compiling architecture behavioral of entity mux2_32bit [mux2_32bit_default]
-Compiling architecture behavioral of entity alusch_32bit [alusch_32bit_default]
-Compiling architecture testbench_arch of entity alusch_32bittest
-Compiled 51 VHDL Units
-Built simulation executable ALUsch_32bittest_isim_beh.exe
-Fuse Memory Usage: 62284 Kb
-Fuse CPU Usage: 3140 ms
+Compiling module glbl
+Compiling module ALUv_32bit
+Compiling architecture testbench_arch of entity aluv_32bittest
+Compiled 7 VHDL Units
+Compiled 2 Verilog Units
+Built simulation executable ALUv_32bittest_isim_beh.exe
+Fuse Memory Usage: 56140 Kb
+Fuse CPU Usage: 1468 ms

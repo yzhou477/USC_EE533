@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 10.1
 --  \   \         Application : sch2vhdl
 --  /   /         Filename : ALUsch_32bit.vhf
--- /___/   /\     Timestamp : 01/25/2025 19:22:15
+-- /___/   /\     Timestamp : 01/25/2025 20:09:59
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

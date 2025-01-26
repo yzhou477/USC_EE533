@@ -1,0 +1,346 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/yzhou477/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.95 secs
+ 
+--> Parameter xsthdpdir set to C:/yzhou477/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.95 secs
+ 
+--> Reading design: ALUv_32bit.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALUv_32bit.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALUv_32bit"
+Output Format                      : NGC
+Target Device                      : xa2s300e-6-ft256
+
+---- Source Options
+Top Module Name                    : ALUv_32bit
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : ALUv_32bit.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ALUv_32bit.v" in library work
+Module <ALUv_32bit> compiled
+No errors in compilation
+Analysis of file <"ALUv_32bit.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <ALUv_32bit> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <ALUv_32bit>.
+Module <ALUv_32bit> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ALUv_32bit>.
+    Related source file is "ALUv_32bit.v".
+WARNING:Xst:647 - Input <cin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 8-to-1 multiplexer for signal <result>.
+    Found 32-bit adder carry out for signal <AUX_1$addsub0000>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+Unit <ALUv_32bit> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder carry out                                : 1
+ 33-bit subtractor                                     : 1
+# Multiplexers                                         : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2s300e.nph' in environment C:\Xilinx\10.1\ISE.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder carry out                                : 1
+ 33-bit subtractor                                     : 1
+# Multiplexers                                         : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ALUv_32bit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALUv_32bit, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ALUv_32bit.ngr
+Top Level Output File Name         : ALUv_32bit
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 103
+
+Cell Usage :
+# BELS                             : 356
+#      GND                         : 1
+#      LUT2                        : 66
+#      LUT3                        : 61
+#      LUT4                        : 67
+#      MUXCY                       : 64
+#      MUXF5                       : 32
+#      VCC                         : 1
+#      XORCY                       : 64
+# IO Buffers                       : 102
+#      IBUF                        : 68
+#      OBUF                        : 34
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa2s300eft256-6 
+
+ Number of Slices:                      103  out of   3072     3%  
+ Number of 4 input LUTs:                194  out of   6144     3%  
+ Number of IOs:                         103
+ Number of bonded IOBs:                 102  out of    178    57%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -6
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 14.738ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3652 / 34
+-------------------------------------------------------------------------
+Delay:               14.738ns (Levels of Logic = 38)
+  Source:            a<0> (PAD)
+  Destination:       result<31> (PAD)
+
+  Data Path: a<0> to result<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.797   1.850  a_0_IBUF (a_0_IBUF)
+     LUT2:I0->O            1   0.468   0.000  Madd_AUX_1_addsub0000_lut<0> (Madd_AUX_1_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.515   0.000  Madd_AUX_1_addsub0000_cy<0> (Madd_AUX_1_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<1> (Madd_AUX_1_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<2> (Madd_AUX_1_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<3> (Madd_AUX_1_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<4> (Madd_AUX_1_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<5> (Madd_AUX_1_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<6> (Madd_AUX_1_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<7> (Madd_AUX_1_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<8> (Madd_AUX_1_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<9> (Madd_AUX_1_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<10> (Madd_AUX_1_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<11> (Madd_AUX_1_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<12> (Madd_AUX_1_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<13> (Madd_AUX_1_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<14> (Madd_AUX_1_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<15> (Madd_AUX_1_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<16> (Madd_AUX_1_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<17> (Madd_AUX_1_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<18> (Madd_AUX_1_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<19> (Madd_AUX_1_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<20> (Madd_AUX_1_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<21> (Madd_AUX_1_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<22> (Madd_AUX_1_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<23> (Madd_AUX_1_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<24> (Madd_AUX_1_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<25> (Madd_AUX_1_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<26> (Madd_AUX_1_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<27> (Madd_AUX_1_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<28> (Madd_AUX_1_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<29> (Madd_AUX_1_addsub0000_cy<29>)
+     MUXCY:CI->O           1   0.058   0.000  Madd_AUX_1_addsub0000_cy<30> (Madd_AUX_1_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.648   0.920  Madd_AUX_1_addsub0000_xor<31> (AUX_1_addsub0000<31>)
+     LUT3:I1->O            1   0.468   0.000  Mmux_result_724 (Mmux_result_724)
+     MUXF5:I0->O           1   0.422   0.920  Mmux_result_5_f5_23 (Mmux_result_5_f524)
+     LUT4:I2->O            1   0.468   0.920  opr<2>241 (result_31_OBUF)
+     OBUF:I->O                 4.602          result_31_OBUF (result<31>)
+    ----------------------------------------
+    Total                     14.738ns (10.128ns logic, 4.610ns route)
+                                       (68.7% logic, 31.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.75 secs
+ 
+--> 
+
+Total memory usage is 145404 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

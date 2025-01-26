@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="2">
+<DesignStatistics TimeStamp="Sat Jan 25 20:24:21 2025"><group name="MiscellaneousStatistics">
+<item name="AVG_LUT_FAN_IN" rev="2">
+<attrib name="value" value="3.541700"/></item>
+<item name="AVG_SIG_FANOUT" rev="2">
+<attrib name="value" value="1.510000"/></item>
+<item name="LUT" rev="2">
+<attrib name="value" value="288"/></item>
+<item name="MAX_SIG_FANOUT" rev="2">
+<attrib name="value" value="87"/></item>
+<item name="PK_NUM_4_INPUT_LUTS" rev="2">
+<attrib name="value" value="288"/></item>
+<item name="PK_NUM_BONDED_IOBS" rev="2">
+<attrib name="value" value="103"/></item>
+<item name="PK_NUM_SLICES" rev="2">
+<attrib name="value" value="145"/></item>
+<item name="SINGLE_LOAD_SIG" rev="2">
+<attrib name="value" value="225"/></item>
+<item name="TWO_LOAD_SIG" rev="2">
+<attrib name="value" value="62"/></item>
+</group>
+</DesignStatistics>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>
