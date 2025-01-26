@@ -1,0 +1,3 @@
+MODULE fadd_32bittest
+SUBMODULE fadd_32bit
+INSTANCE UUT

@@ -1,1 +1,5 @@
 sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/fadd_1bit.sch" fadd_1bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/fadd_1bit.sch" fadd_1bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/fadd_1bit.sch" fadd_1bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/fadd_1bit.sch" fadd_1bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/fadd_1bit.sch" fadd_1bit.vhf

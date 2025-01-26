@@ -1,0 +1,4 @@
+select figure at 975 1627 7 -branches -sn=1
+select figure at 973 1625 7 -branches -sn=1
+select figure at 875 763 7 -branches -sn=1
+select all in 873 761 2502 1795 -branches -enclosed -noattrwin -sn=1

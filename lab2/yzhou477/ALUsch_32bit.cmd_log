@@ -1,0 +1,4 @@
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/ALUsch_32bit.sch" ALUsch_32bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/ALUsch_32bit.sch" ALUsch_32bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/ALUsch_32bit.sch" ALUsch_32bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/ALUsch_32bit.sch" ALUsch_32bit.vhf

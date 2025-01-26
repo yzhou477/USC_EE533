@@ -1,0 +1,1 @@
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/MUX2.sch" MUX2.vhf

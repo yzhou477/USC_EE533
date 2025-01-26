@@ -1,0 +1,3 @@
+MODULE subtractor_32bittest
+SUBMODULE subtractor_32bit
+INSTANCE UUT

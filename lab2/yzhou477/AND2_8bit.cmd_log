@@ -1,0 +1,2 @@
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/AND2_8bit.sch" AND2_8bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/AND2_8bit.sch" AND2_8bit.vhf

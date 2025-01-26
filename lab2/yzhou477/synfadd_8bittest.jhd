@@ -1,0 +1,3 @@
+MODULE synfadd_8bittest
+SUBMODULE synfadd_8bit
+INSTANCE UUT

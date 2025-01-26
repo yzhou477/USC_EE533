@@ -1,0 +1,5 @@
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/XOR1_32bit.sch" XOR1_32bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/XOR1_32bit.sch" XOR1_32bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/XOR1_32bit.sch" XOR1_32bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/XOR1_32bit.sch" XOR1_32bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/XOR1_32bit.sch" XOR1_32bit.vhf

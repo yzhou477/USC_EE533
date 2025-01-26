@@ -21,43 +21,32 @@ BEGIN SCHEMATIC
         SIGNAL z(5)
         SIGNAL z(6)
         SIGNAL z(7)
-        SIGNAL XLXN_25
-        SIGNAL a_reg(0)
-        SIGNAL b_reg(0)
-        SIGNAL XLXN_28
-        SIGNAL a_reg(1)
-        SIGNAL b_reg(1)
-        SIGNAL a_reg(2)
-        SIGNAL b_reg(2)
-        SIGNAL a_reg(3)
-        SIGNAL b_reg(3)
-        SIGNAL a_reg(4)
-        SIGNAL b_reg(4)
-        SIGNAL a_reg(5)
-        SIGNAL b_reg(5)
-        SIGNAL a_reg(6)
-        SIGNAL b_reg(6)
-        SIGNAL a_reg(7)
-        SIGNAL b_reg(7)
-        SIGNAL cin
+        SIGNAL a(0)
+        SIGNAL b(0)
+        SIGNAL a(1)
+        SIGNAL b(1)
+        SIGNAL a(2)
+        SIGNAL b(2)
+        SIGNAL a(3)
+        SIGNAL b(3)
+        SIGNAL a(4)
+        SIGNAL b(4)
+        SIGNAL a(5)
+        SIGNAL b(5)
+        SIGNAL a(6)
+        SIGNAL b(6)
+        SIGNAL a(7)
+        SIGNAL b(7)
         SIGNAL a(7:0)
         SIGNAL b(7:0)
-        SIGNAL zreg(7:0)
-        SIGNAL coutreg
-        SIGNAL clk
-        SIGNAL enable
-        SIGNAL clear
-        SIGNAL a_reg(7:0)
-        SIGNAL b_reg(7:0)
         SIGNAL z(7:0)
-        PORT Input cin
+        SIGNAL cin
+        SIGNAL cout
         PORT Input a(7:0)
         PORT Input b(7:0)
-        PORT Output zreg(7:0)
-        PORT Output coutreg
-        PORT Input clk
-        PORT Input enable
-        PORT Input clear
+        PORT Output z(7:0)
+        PORT Input cin
+        PORT Output cout
         BEGIN BLOCKDEF fadd_1bit
             TIMESTAMP 2025 1 25 8 0 31
             RECTANGLE N 64 -192 320 0 
@@ -67,124 +56,61 @@ BEGIN SCHEMATIC
             LINE N 320 -160 384 -160 
             LINE N 320 -32 384 -32 
         END BLOCKDEF
-        BEGIN BLOCKDEF fdce
-            TIMESTAMP 2000 1 1 10 10 10
-            LINE N 0 -128 64 -128 
-            LINE N 0 -192 64 -192 
-            LINE N 0 -32 64 -32 
-            LINE N 0 -256 64 -256 
-            LINE N 384 -256 320 -256 
-            LINE N 64 -112 80 -128 
-            LINE N 80 -128 64 -144 
-            LINE N 192 -64 192 -32 
-            LINE N 192 -32 64 -32 
-            RECTANGLE N 64 -320 320 -64 
-        END BLOCKDEF
-        BEGIN BLOCKDEF fd8ce
-            TIMESTAMP 2000 1 1 10 10 10
-            LINE N 0 -128 64 -128 
-            LINE N 0 -192 64 -192 
-            LINE N 0 -32 64 -32 
-            LINE N 0 -256 64 -256 
-            LINE N 384 -256 320 -256 
-            LINE N 192 -32 64 -32 
-            LINE N 192 -64 192 -32 
-            LINE N 80 -128 64 -144 
-            LINE N 64 -112 80 -128 
-            RECTANGLE N 320 -268 384 -244 
-            RECTANGLE N 0 -268 64 -244 
-            RECTANGLE N 64 -320 320 -64 
-        END BLOCKDEF
         BEGIN BLOCK XLXI_5 fadd_1bit
-            PIN a a_reg(4)
-            PIN b b_reg(4)
+            PIN a a(4)
+            PIN b b(4)
             PIN cin XLXN_6
             PIN z z(4)
             PIN cout XLXN_12
         END BLOCK
         BEGIN BLOCK XLXI_4 fadd_1bit
-            PIN a a_reg(3)
-            PIN b b_reg(3)
+            PIN a a(3)
+            PIN b b(3)
             PIN cin XLXN_5
             PIN z z(3)
             PIN cout XLXN_6
         END BLOCK
         BEGIN BLOCK XLXI_3 fadd_1bit
-            PIN a a_reg(2)
-            PIN b b_reg(2)
+            PIN a a(2)
+            PIN b b(2)
             PIN cin XLXN_2
             PIN z z(2)
             PIN cout XLXN_5
         END BLOCK
         BEGIN BLOCK XLXI_2 fadd_1bit
-            PIN a a_reg(1)
-            PIN b b_reg(1)
+            PIN a a(1)
+            PIN b b(1)
             PIN cin XLXN_1
             PIN z z(1)
             PIN cout XLXN_2
         END BLOCK
         BEGIN BLOCK XLXI_1 fadd_1bit
-            PIN a a_reg(0)
-            PIN b b_reg(0)
-            PIN cin XLXN_28
+            PIN a a(0)
+            PIN b b(0)
+            PIN cin cin
             PIN z z(0)
             PIN cout XLXN_1
         END BLOCK
         BEGIN BLOCK XLXI_6 fadd_1bit
-            PIN a a_reg(5)
-            PIN b b_reg(5)
+            PIN a a(5)
+            PIN b b(5)
             PIN cin XLXN_12
             PIN z z(5)
             PIN cout XLXN_14
         END BLOCK
         BEGIN BLOCK XLXI_7 fadd_1bit
-            PIN a a_reg(6)
-            PIN b b_reg(6)
+            PIN a a(6)
+            PIN b b(6)
             PIN cin XLXN_14
             PIN z z(6)
             PIN cout XLXN_16
         END BLOCK
         BEGIN BLOCK XLXI_8 fadd_1bit
-            PIN a a_reg(7)
-            PIN b b_reg(7)
+            PIN a a(7)
+            PIN b b(7)
             PIN cin XLXN_16
             PIN z z(7)
-            PIN cout XLXN_25
-        END BLOCK
-        BEGIN BLOCK XLXI_35 fdce
-            PIN C clk
-            PIN CE enable
-            PIN CLR clear
-            PIN D cin
-            PIN Q XLXN_28
-        END BLOCK
-        BEGIN BLOCK XLXI_36 fd8ce
-            PIN C clk
-            PIN CE enable
-            PIN CLR clear
-            PIN D(7:0) a(7:0)
-            PIN Q(7:0) a_reg(7:0)
-        END BLOCK
-        BEGIN BLOCK XLXI_37 fd8ce
-            PIN C clk
-            PIN CE enable
-            PIN CLR clear
-            PIN D(7:0) b(7:0)
-            PIN Q(7:0) b_reg(7:0)
-        END BLOCK
-        BEGIN BLOCK XLXI_42 fd8ce
-            PIN C clk
-            PIN CE enable
-            PIN CLR clear
-            PIN D(7:0) z(7:0)
-            PIN Q(7:0) zreg(7:0)
-        END BLOCK
-        BEGIN BLOCK XLXI_40 fdce
-            PIN C clk
-            PIN CE enable
-            PIN CLR clear
-            PIN D XLXN_25
-            PIN Q coutreg
+            PIN cout cout
         END BLOCK
     END NETLIST
     BEGIN SHEET 1 3520 2720
@@ -279,205 +205,73 @@ BEGIN SCHEMATIC
         BEGIN BRANCH z(7)
             WIRE 2720 1056 2720 1152
         END BRANCH
-        BEGIN BRANCH a_reg(0)
+        BEGIN BRANCH a(0)
             WIRE 416 1536 416 1680
         END BRANCH
-        BEGIN BRANCH b_reg(0)
+        BEGIN BRANCH b(0)
             WIRE 480 1536 480 1680
         END BRANCH
-        BEGIN BRANCH XLXN_28
-            WIRE 544 1536 544 1680
-            WIRE 544 1680 544 1744
-            WIRE 544 1744 864 1744
-            WIRE 864 1744 864 1904
-            WIRE 800 1904 864 1904
-        END BRANCH
-        BEGIN BRANCH a_reg(1)
+        BEGIN BRANCH a(1)
             WIRE 736 1536 736 1680
         END BRANCH
-        BEGIN BRANCH b_reg(1)
+        BEGIN BRANCH b(1)
             WIRE 800 1536 800 1680
         END BRANCH
-        BEGIN BRANCH a_reg(2)
+        BEGIN BRANCH a(2)
             WIRE 1056 1536 1056 1680
         END BRANCH
-        BEGIN BRANCH b_reg(2)
+        BEGIN BRANCH b(2)
             WIRE 1120 1536 1120 1680
         END BRANCH
-        BEGIN BRANCH a_reg(3)
+        BEGIN BRANCH a(3)
             WIRE 1376 1536 1376 1680
         END BRANCH
-        BEGIN BRANCH b_reg(3)
+        BEGIN BRANCH b(3)
             WIRE 1440 1536 1440 1680
         END BRANCH
-        BEGIN BRANCH a_reg(4)
+        BEGIN BRANCH a(4)
             WIRE 1712 1536 1712 1680
         END BRANCH
-        BEGIN BRANCH b_reg(4)
+        BEGIN BRANCH b(4)
             WIRE 1776 1536 1776 1680
         END BRANCH
-        BEGIN BRANCH a_reg(5)
+        BEGIN BRANCH a(5)
             WIRE 2048 1536 2048 1680
         END BRANCH
-        BEGIN BRANCH b_reg(5)
+        BEGIN BRANCH b(5)
             WIRE 2112 1536 2112 1696
         END BRANCH
-        BEGIN BRANCH a_reg(6)
+        BEGIN BRANCH a(6)
             WIRE 2384 1536 2384 1680
         END BRANCH
-        BEGIN BRANCH b_reg(6)
+        BEGIN BRANCH b(6)
             WIRE 2448 1536 2448 1680
         END BRANCH
-        BEGIN BRANCH a_reg(7)
+        BEGIN BRANCH a(7)
             WIRE 2720 1536 2720 1680
         END BRANCH
-        BEGIN BRANCH b_reg(7)
+        BEGIN BRANCH b(7)
             WIRE 2784 1536 2784 1680
         END BRANCH
-        INSTANCE XLXI_35 416 2160 R0
-        BEGIN BRANCH cin
-            WIRE 352 1904 416 1904
-        END BRANCH
-        IOMARKER 352 1904 cin R180 28
-        INSTANCE XLXI_36 688 880 R0
         BEGIN BRANCH a(7:0)
             WIRE 528 624 688 624
         END BRANCH
         IOMARKER 528 624 a(7:0) R180 28
-        INSTANCE XLXI_37 1552 880 R0
         BEGIN BRANCH b(7:0)
-            WIRE 1392 624 1552 624
+            WIRE 528 720 688 720
         END BRANCH
-        IOMARKER 1392 624 b(7:0) R180 28
-        INSTANCE XLXI_42 2176 880 R0
-        BEGIN BRANCH zreg(7:0)
-            WIRE 2560 624 2704 624
-        END BRANCH
-        IOMARKER 2704 624 zreg(7:0) R0 28
-        INSTANCE XLXI_40 2224 2160 R0
-        BEGIN BRANCH coutreg
-            WIRE 2608 1904 2704 1904
-        END BRANCH
-        IOMARKER 2704 1904 coutreg R0 28
-        BEGIN BRANCH XLXN_25
-            WIRE 2208 1744 2224 1744
-            WIRE 2224 1744 2944 1744
-            WIRE 2208 1744 2208 1904
-            WIRE 2208 1904 2224 1904
-            WIRE 2848 1056 2848 1152
-            WIRE 2848 1056 2944 1056
-            WIRE 2944 1056 2944 1744
-        END BRANCH
-        BEGIN BRANCH enable
-            WIRE 2128 1968 2224 1968
-            BEGIN DISPLAY 2128 1968 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clk
-            WIRE 2128 2032 2224 2032
-            BEGIN DISPLAY 2128 2032 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clk
-            WIRE 624 752 688 752
-            BEGIN DISPLAY 624 752 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clk
-            WIRE 1472 752 1552 752
-            BEGIN DISPLAY 1472 752 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH enable
-            WIRE 2096 688 2176 688
-            BEGIN DISPLAY 2096 688 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clk
-            WIRE 2096 752 2176 752
-            BEGIN DISPLAY 2096 752 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH enable
-            WIRE 352 1968 416 1968
-            BEGIN DISPLAY 352 1968 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clk
-            WIRE 352 2032 416 2032
-            BEGIN DISPLAY 352 2032 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clk
-            WIRE 1360 1984 1520 1984
-        END BRANCH
-        IOMARKER 1360 1984 clk R180 28
-        BEGIN BRANCH enable
-            WIRE 1360 1888 1520 1888
-        END BRANCH
-        IOMARKER 1360 1888 enable R180 28
-        BEGIN BRANCH clear
-            WIRE 624 848 688 848
-            BEGIN DISPLAY 624 848 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH enable
-            WIRE 608 688 688 688
-            BEGIN DISPLAY 608 688 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clear
-            WIRE 1472 848 1552 848
-            BEGIN DISPLAY 1472 848 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH enable
-            WIRE 1472 688 1552 688
-            BEGIN DISPLAY 1472 688 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clear
-            WIRE 2080 848 2176 848
-            BEGIN DISPLAY 2080 848 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clear
-            WIRE 1360 2080 1520 2080
-        END BRANCH
-        BEGIN BRANCH clear
-            WIRE 352 2128 416 2128
-            BEGIN DISPLAY 352 2128 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH clear
-            WIRE 2128 2128 2224 2128
-            BEGIN DISPLAY 2128 2128 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        IOMARKER 1360 2080 clear R180 28
-        BEGIN BRANCH a_reg(7:0)
-            WIRE 1072 624 1120 624
-        END BRANCH
-        BEGIN BRANCH b_reg(7:0)
-            WIRE 1936 624 1984 624
-        END BRANCH
+        IOMARKER 528 720 b(7:0) R180 28
         BEGIN BRANCH z(7:0)
-            WIRE 2112 624 2176 624
+            WIRE 1008 624 1152 624
         END BRANCH
+        IOMARKER 1152 624 z(7:0) R0 28
+        BEGIN BRANCH cin
+            WIRE 544 1536 544 1680
+        END BRANCH
+        BEGIN BRANCH cout
+            WIRE 2848 1040 2848 1152
+        END BRANCH
+        IOMARKER 544 1680 cin R90 28
+        IOMARKER 2848 1040 cout R270 28
     END SHEET
 END SCHEMATIC

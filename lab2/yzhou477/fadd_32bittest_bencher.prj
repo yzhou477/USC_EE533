@@ -1,0 +1,3 @@
+vhdl work "fadd_1bit.vhf"
+vhdl work "fadd_8bit.vhf"
+vhdl work "fadd_32bit.vhf"

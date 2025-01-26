@@ -1,0 +1,5 @@
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/synfadd_8bit.sch" synfadd_8bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/synfadd_8bit.sch" synfadd_8bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/synfadd_8bit.sch" synfadd_8bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/synfadd_8bit.sch" synfadd_8bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/synfadd_8bit.sch" synfadd_8bit.vhf

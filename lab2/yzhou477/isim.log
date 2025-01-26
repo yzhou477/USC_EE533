@@ -1,0 +1,42 @@
+Command line:
+   ./ALUsch_32bittest_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1151
+
+Sat Jan 25 19:27:32 2025
+
+Total Line Count : 35
+
+ Elaboration Time: 0.1875 sec
+
+ Current Memory Usage: 146.555 Meg
+
+ Total Signals          : 5254
+ Total Nets             : 1211
+ Total Signal Drivers   : 1127
+ Total Blocks           : 1402
+ Total Primitive Blocks : 1122
+ Total Processes        : 1123
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 2233
+ntrace select -o on -n /alusch_32bittest/a 
+ntrace select -o on -n /alusch_32bittest/b 
+ntrace select -o on -n /alusch_32bittest/cin 
+ntrace select -o on -n /alusch_32bittest/opr 
+ntrace select -o on -n /alusch_32bittest/shiftdir 
+ntrace select -o on -n /alusch_32bittest/add_cout 
+ntrace select -o on -n /alusch_32bittest/sub_cout 
+ntrace select -o on -n /alusch_32bittest/z 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+isimrun 600ns 
+
+ Total Simulation Time: 0.53125 sec
+
+ Current Memory Usage: 155.992 Meg
+
+Sat Jan 25 19:29:28 2025
+

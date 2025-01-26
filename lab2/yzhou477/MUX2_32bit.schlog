@@ -1,0 +1,10 @@
+select figure at 1101 1125 6 -branches -toggle -sn=1
+select figure at 1103 1258 6 -branches -toggle -sn=1
+select figure at 1218 1265 6 -branches -toggle -sn=1
+select figure at 1230 1117 6 -branches -toggle -sn=1
+select figure at 2088 1137 6 -branches -toggle -sn=1
+select figure at 2190 1144 6 -branches -toggle -sn=1
+select figure at 2487 1568 6 -branches -sn=1
+select figure at 2485 1566 6 -branches -sn=1
+select figure at 2487 1568 6 -branches -sn=1
+select figure at 2487 1568 6 -branches -all -sn=1

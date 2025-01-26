@@ -1,0 +1,2 @@
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/OR2_32bit.sch" OR2_32bit.vhf
+sch2vhdl -intstyle ise -family aspartan2e -flat -suppress -w "C:/yzhou477/OR2_32bit.sch" OR2_32bit.vhf

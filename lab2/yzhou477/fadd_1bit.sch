@@ -12,7 +12,6 @@ BEGIN SCHEMATIC
         SIGNAL XLXN_4
         SIGNAL XLXN_11
         SIGNAL XLXN_12
-        SIGNAL XLXN_7
         SIGNAL cin
         SIGNAL z
         SIGNAL cout
