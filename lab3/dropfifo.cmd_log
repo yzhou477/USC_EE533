@@ -1,0 +1,4 @@
+sch2verilog -intstyle ise -family virtex2p   -w "C:/yzhou477/lab3/dropfifo.sch" dropfifo.vf
+sch2verilog -intstyle ise -family virtex2p   -w "C:/yzhou477/lab3/dropfifo.sch" dropfifo.vf
+sch2verilog -intstyle ise -family virtex2p   -w "C:/yzhou477/lab3/dropfifo.sch" dropfifo.vf
+sch2verilog -intstyle ise -family virtex2p   -w "C:/yzhou477/lab3/dropfifo.sch" dropfifo.vf

@@ -1,0 +1,11 @@
+# Output products list for <dual_core_mem_element>
+dual_core_mem_element.asy
+dual_core_mem_element.ngc
+dual_core_mem_element.sym
+dual_core_mem_element.v
+dual_core_mem_element.veo
+dual_core_mem_element.vhd
+dual_core_mem_element.vho
+dual_core_mem_element.xco
+dual_core_mem_element_flist.txt
+dual_core_mem_element_xmdf.tcl

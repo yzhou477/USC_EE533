@@ -1,0 +1,10 @@
+NEWPROJECT "C:/yzhou477/lab3/"
+SETPROJECT "C:/yzhou477/lab3/"
+SET BusFormat = BusFormatAngleBracketNotRipped
+SET devicefamily = virtex2p
+SET device = xc2vp30
+SET package = fg676
+SET speedgrade = -6
+SET FlowVendor = Foundation_iSE
+SET VerilogSim = True
+SET VHDLSim = True
