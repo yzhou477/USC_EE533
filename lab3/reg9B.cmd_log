@@ -1,2 +1,0 @@
-sch2verilog -intstyle ise -family virtex2p   -w "C:/yzhou477/lab3/reg9B.sch" reg9B.vf
-sch2verilog -intstyle ise -family virtex2p   -w "C:/yzhou477/lab3/reg9B.sch" reg9B.vf
