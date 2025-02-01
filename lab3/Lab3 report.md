@@ -1,6 +1,14 @@
 # Lab3 report
 
-## a) Pattern Matching Algorithm 
+
+* [Pattern Matching Algorithm](#1)
+* [QA](#2)
+* [Schematics](#3)
+* [Generated Verilog](#4)
+* [Testbench and Waveform](#5)
+
+
+<h4 id="1"> Pattern Matching Algorithm </h4>
 
 1. Get a 112 bits data block by concatenating the lower 48 bits of the previous packet data with the lower 64 bits of the current packet data;
 2. Divide the 112 bits data block into 8 consecutive 56 bits segments;
@@ -10,16 +18,15 @@
 
 
 
-## b)
+<h4 id="2"> QA </h4>
 
 1. amask[6:0] is a 7-bit mask. If amask[x] == 0, the corresponding xth byte in the data being compared can be ignored.
 2. busmerge module concatenates the lower 48 bits of the previous packet data with the lower 64 bits of the current packet data.
 3. The comp8 module compares two 8 bits data, and sets 'EQ' to 1 only when all bits between them match perfectly.
 4. The dual9Bmem is used to store the packet data that is not dropped. And these data can be accessed.
 
-## c)
 
-### Schematics
+<h4 id="3"> Schematics </h3>
 
 Comparator
 
@@ -33,13 +40,15 @@ dropfifo
 
 ![dropfifo_sch](./Pictures/dropfifo_sch.png)
 
-wordmatch![wordmatch_sch](./Pictures/wordmatch_sch.png)
+wordmatch
+
+![wordmatch_sch](./Pictures/wordmatch_sch.png)
 
 reg9B
 
 ![reg9B_sch](./Pictures/reg9B_sch.png)
 
-### .vf
+<h4 id="4"> Generated Verilog </h4>
 
 comparator
 
@@ -121,7 +130,8 @@ dropfifo
 
 ![dropfifo_v17](./Pictures/dropfifo_v17.png)
 
-## d) Testbench and Waveform
+
+<h4 id="5"> Testbench and Waveform </h4>
 
 ![wv01](./Pictures/wv01.png)
 
