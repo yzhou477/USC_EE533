@@ -1782,3 +1782,10 @@ WARNING:Simulator:29 - at 22.000 us: Warning: Timing violation in
    /ids_tb/UUT/drop_fifo/XLXI_31/inst/  $recovery( CLKA:22.000 us, CLKB:22.000
    us,1.000 ns)
 
+
+ Total Simulation Time: 1.65625 sec
+
+ Current Memory Usage: 160.162 Meg
+
+Sat Feb 01 02:41:23 2025
+

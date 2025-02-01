@@ -845,7 +845,6 @@ proc restore { { project_dir "" } } {
       "generic_regs.v" 
       "ids_sim.v" 
       "ids_tb.tbw" 
-      "ids_tb.xwv" 
       "reg9B.sch" 
       "small_fifo.v" 
       "wordmatch.sch"}
@@ -866,6 +865,7 @@ proc restore { { project_dir "" } } {
       "dual9Bmem.veo" 
       "dual9Bmem.vhd" 
       "dual9Bmem.vho" 
+      "ids_tb.xwv" 
       "reg9B.sym" 
       "wordmatch.sym"}
 
