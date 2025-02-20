@@ -1,5 +1,5 @@
-# USC_EE533
-Lab codes for EE533: Network Processor Design and Programming
+# DPI-8T-DualCore
+Lab codes for USC-EE533: Network Processor Design and Programming
 
 Lab1 : Socket Programming
 
