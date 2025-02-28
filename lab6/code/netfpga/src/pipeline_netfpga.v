@@ -6,15 +6,49 @@
 `define PIPE_REG_ADDR_WIDTH 3
 
 module pipeline 
+   #(
+      parameter DATA_WIDTH = 64,
+      parameter CTRL_WIDTH = DATA_WIDTH/8,
+      parameter UDP_REG_SRC_WIDTH = 2
+   )
 	(
-		// To verify D-MEM result 
-		input [7:0]									mem_raddr_ver,
-		output [63:0]								mem_rdata_ver,	
-	
-	   // misc	
+      input  [DATA_WIDTH-1:0]             in_data,
+      input  [CTRL_WIDTH-1:0]             in_ctrl,
+      input                               in_wr,
+      output                              in_rdy,
+
+      output [DATA_WIDTH-1:0]             out_data,
+      output [CTRL_WIDTH-1:0]             out_ctrl,
+      output                              out_wr,
+      input                               out_rdy,
+      
+      // --- Register interface
+      input                               reg_req_in,
+      input                               reg_ack_in,
+      input                               reg_rd_wr_L_in,
+      input  [`UDP_REG_ADDR_WIDTH-1:0]    reg_addr_in,
+      input  [`CPCI_NF2_DATA_WIDTH-1:0]   reg_data_in,
+      input  [UDP_REG_SRC_WIDTH-1:0]      reg_src_in,
+
+      output                              reg_req_out,
+      output                              reg_ack_out,
+      output                              reg_rd_wr_L_out,
+      output  [`UDP_REG_ADDR_WIDTH-1:0]   reg_addr_out,
+      output  [`CPCI_NF2_DATA_WIDTH-1:0]  reg_data_out,
+      output  [UDP_REG_SRC_WIDTH-1:0]     reg_src_out,
+
+      // misc	
 		input 										clk,
 		input 										reset
 );
+
+	// Software registers
+	wire [7:0]									mem_raddr_ver;
+
+   // Hardware registers
+   wire [63:0]								   mem_rdata_ver;
+	wire [31:0]								   mem_rdata_ver_high;	
+   wire [31:0]								   mem_rdata_ver_low;
 
 	// D-MEM
 	wire [7:0]									dmem_waddr;
@@ -55,8 +89,15 @@ module pipeline
 	wire [63:0]									wb_memdata;
 	wire [63:0]									wb_regdata;
 	
+   assign out_data = in_data;
+   assign out_ctrl =in_ctrl;
+   assign out_wr = in_wr;
+   assign in_rdy = out_rdy;
+
 	// Verification(D-MEM)
-	assign mem_rdata_ver = mem_raddr_ver === 8'bxxxxxxxx ? 64'b0 : dmem_rdata;	// If input mem_raddr_ver is unknown
+	assign mem_rdata_ver = dmem_rdata;
+   assign mem_rdata_ver_low = mem_rdata_ver[63:32];
+   assign mem_rdata_ver_high = mem_rdata_ver[31:0];
 	
 	pc PC (
 		.clk										(clk),
@@ -137,7 +178,7 @@ module pipeline
 	assign dmem_waddr = mem_rsdata;
 	assign dmem_wdata = mem_rtdata;
 	assign dmem_we = mem_memwrite;
-	assign dmem_raddr = 	mem_raddr_ver === 8'bxxxxxxxx ? mem_rsdata : mem_raddr_ver;	// If input mem_raddr_ver is unknown
+	assign dmem_raddr = 	pc_out == 9'b111111111 ? mem_raddr_ver : mem_rsdata;	// If end of program
 
    data_mem D_MEM(
 		.addra				(dmem_waddr),
@@ -165,5 +206,42 @@ module pipeline
 	);
 
 	assign wb_regdata = wb_memdata;
+
+   generic_regs
+   #( 
+      .UDP_REG_SRC_WIDTH   (UDP_REG_SRC_WIDTH),
+      .TAG                 (`PIPELINE_BLOCK_ADDR),          // Tag -- eg. MODULE_TAG
+      .REG_ADDR_WIDTH      (`PIPELINE_REG_ADDR_WIDTH),     // Width of block addresses -- eg. MODULE_REG_ADDR_WIDTH
+      .NUM_COUNTERS        (0),                 // Number of counters
+      .NUM_SOFTWARE_REGS   (1),                 // Number of sw regs
+      .NUM_HARDWARE_REGS   (2)                  // Number of hw regs
+   ) module_regs (
+      .reg_req_in       (reg_req_in),
+      .reg_ack_in       (reg_ack_in),
+      .reg_rd_wr_L_in   (reg_rd_wr_L_in),
+      .reg_addr_in      (reg_addr_in),
+      .reg_data_in      (reg_data_in),
+      .reg_src_in       (reg_src_in),
+
+      .reg_req_out      (reg_req_out),
+      .reg_ack_out      (reg_ack_out),
+      .reg_rd_wr_L_out  (reg_rd_wr_L_out),
+      .reg_addr_out     (reg_addr_out),
+      .reg_data_out     (reg_data_out),
+      .reg_src_out      (reg_src_out),
+
+      // --- counters interface
+      .counter_updates  (),
+      .counter_decrement(),
+
+      // --- SW regs interface
+      .software_regs    (mem_raddr_ver),
+
+      // --- HW regs interface
+      .hardware_regs    ({mem_rdata_ver_high, mem_rdata_ver_low}),
+
+      .clk              (clk),
+      .reset            (reset)
+    );
 
 endmodule

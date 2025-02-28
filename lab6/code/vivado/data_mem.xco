@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version K.31
-# Date: Fri Feb 28 12:43:25 2025
+# Date: Sun Feb 23 08:02:58 2025
 #
 ##############################################################
 #
@@ -35,7 +35,6 @@ SET vhdlsim = True
 SELECT Dual_Port_Block_Memory family Xilinx,_Inc. 6.3
 # END Select
 # BEGIN Parameters
-CSET coefficient_file=C:\pipeline_datapath\dmem_init.coe
 CSET component_name=data_mem
 CSET configuration_port_a=Write_Only
 CSET configuration_port_b=Read_Only
@@ -43,7 +42,7 @@ CSET depth_a=256
 CSET depth_b=256
 CSET disable_warning_messages=true
 CSET global_init_value=0
-CSET load_init_file=true
+CSET load_init_file=false
 CSET port_a_active_clock_edge=Rising_Edge_Triggered
 CSET port_a_additional_output_pipe_stages=0
 CSET port_a_enable_pin=false
@@ -72,5 +71,5 @@ CSET write_mode_port_a=No_Read_On_Write
 CSET write_mode_port_b=Read_After_Write
 # END Parameters
 GENERATE
-# CRC: 6ec859ab
+# CRC:  9c96bb5
 
